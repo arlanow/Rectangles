@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Bot.qml</file>
+        <file>GameMechanics.qml</file>
+        <file>Field.qml</file>
+        <file>MenuScreen.qml</file>
+        <file>SettingsScreen.qml</file>
+        <file>GameScreen.qml</file>
+        <file>CampaignScreen.qml</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file alias="close.svg">close.svg</file>
+        <file alias="menu.svg">menu.svg</file>
+        <file alias="end.svg">flag-variant-outline.svg</file>
+        <file alias="skip.svg">timer-sand-empty.svg</file>
+        <file alias="dice1.svg">dice-1.svg</file>
+        <file alias="dice2.svg">dice-2.svg</file>
+        <file alias="dice3.svg">dice-3.svg</file>
+        <file alias="dice4.svg">dice-4.svg</file>
+        <file alias="dice5.svg">dice-5.svg</file>
+        <file alias="dice6.svg">dice-6.svg</file>
+    </qresource>
+</RCC>
