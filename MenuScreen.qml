@@ -22,7 +22,7 @@ Item {
             Layout.fillWidth: true
             Button {
                 Layout.fillWidth: true
-                text: 'Компания (не работает)'
+                text: 'Компания (не работает!)'
                 onClicked: screen.currentIndex++
             }
             Button {
