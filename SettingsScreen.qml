@@ -22,15 +22,15 @@ Item {
             RowLayout {
                 Layout.fillWidth: true
                 Label {
-                    text: 'Бот'
+                    text: 'Боты'
                     Layout.preferredWidth: 100
                 }
                 Item {
                     width: 20
                 }
-                Switch {
-                    checked: main.botActive
-                    onCheckedChanged: main.botActive = checked
+                ComboBox {
+                    model: [0,1,3]
+                    onCurrentIndexChanged: if (currentIndex==0) main.botActive = false; else main.botActive = true
                 }
             }
             RowLayout {

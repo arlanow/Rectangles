@@ -32,6 +32,11 @@ Item {
             }
             Button {
                 Layout.fillWidth: true
+                text: 'Сетевая игра'
+                onClicked: screen.currentIndex++
+            }
+            Button {
+                Layout.fillWidth: true
                 text: 'Выход'
                 onClicked: main.close()
             }

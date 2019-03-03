@@ -20,5 +20,7 @@
         <file alias="dice4.svg">dice-4.svg</file>
         <file alias="dice5.svg">dice-5.svg</file>
         <file alias="dice6.svg">dice-6.svg</file>
+        <file alias="icon.png">tiles.png</file>
+        <file alias="icon.ico">tiles.ico</file>
     </qresource>
 </RCC>

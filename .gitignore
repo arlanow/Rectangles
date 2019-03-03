@@ -1,2 +1,10 @@
 gpg-cpp-sdk/
 Rectangles.pro.user.e9dc984.4.8-pre1
+.qmake.stash
+.qmake.winrt_uuid_Rectangles
+debug/moc_predefs.h.cbt
+Rectangles.vcxproj.filters
+Package.appxmanifest
+release/moc_predefs.h.cbt
+Rectangles.vcxproj
+Rectangles.pro.user.4.9-pre1

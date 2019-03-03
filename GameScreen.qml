@@ -14,6 +14,23 @@ Item {
     function fieldFocus() {
         field.forceActiveFocus()
     }
+    Rectangle {
+        id: diceObject
+        visible: false
+        property bool rotated: false
+        width: if (rotated) game.turnHeight*rowSize; else game.turnWidth*rowSize
+        height: if (rotated) game.turnWidth*rowSize; else game.turnHeight*rowSize
+        color: 'red'
+        border.width: 1
+        Drag.active: diceObjectMouseArea.drag.active
+        z: 30
+        MouseArea {
+            id: diceObjectMouseArea
+            anchors.fill: parent
+            drag.target: parent
+        }
+    }
+
     ColumnLayout {
         id: gameLayout
         anchors.fill: parent
@@ -46,6 +63,17 @@ Item {
             Item {
                 Layout.preferredHeight: 50
                 Layout.preferredWidth: 50
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        if (diceObject.visible && !diceObject.rotated) diceObject.visible = false
+                        else {
+                            diceObject.rotated = false
+                            diceObject.visible = true
+                        }
+                    }
+                }
+
                 Image {
                     id: dice1
                     source: 'qrc:/icons/dice'+game.turnWidth+'.svg'
@@ -68,6 +96,16 @@ Item {
             Item {
                 Layout.preferredHeight: 50
                 Layout.preferredWidth: 50
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        if (diceObject.visible && diceObject.rotated) diceObject.visible = false
+                        else {
+                            diceObject.rotated = true
+                            diceObject.visible = true
+                        }
+                    }
+                }
                 Image {
                     id: dice2
                     source: 'qrc:/icons/dice'+game.turnHeight+'.svg'

@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QQuickStyle>
 #include "googleplayserviesapi.h"
+#include <QIcon>
 //#include <QtAndroidExtras>
 int main(int argc, char *argv[])
 {
@@ -11,7 +12,8 @@ int main(int argc, char *argv[])
     app.setOrganizationName("Aleksandr Arlanov");
     app.setOrganizationDomain("arlanov.com");
     app.setApplicationName("rectangles");
-    auto gps = new GooglePlayServiesApi();
+    app.setWindowIcon(QIcon("qrc:/icons/icon.ico"));
+    //auto gps = new GooglePlayServiesApi();
     QQmlApplicationEngine engine;
     QQuickStyle::setStyle("Material");
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
